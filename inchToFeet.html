@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>inch To Feet</title>
+</head>
+<body>
+    <input id="getinchi" type="number" placeholder="type your inch">
+    <br><br>
+    <button id="feetBtn">inch To Feet</button>
+    <p> your feet = <span id="displayFeet">0</span></p>
+
+    <script>
+        document.getElementById("feetBtn").addEventListener('click' , function(){
+            const getinchijs =  document.getElementById("getinchi");
+            const getinchivalue = parseFloat(getinchijs.value);
+
+            function getFunction(getinchivalue) {
+                const calculateinchi = getinchivalue / 12;
+                return calculateinchi;
+            }
+            document.getElementById("displayFeet").innerText = getFunction(getinchivalue);
+
+        });
+    </script>
+
+</body>
+</html>
